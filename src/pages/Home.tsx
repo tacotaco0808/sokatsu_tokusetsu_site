@@ -1,9 +1,8 @@
+import sokatsuPoster from "../assets/sokatsu_poster.png";
 export const Home = () => {
   return (
     <div>
-      <h1>創作活動部　特設サイト//工事中//</h1>
-      <p>このサイトは、創作活動部の特設サイトです。</p>
-      <p>工事中ですので、しばらくお待ちください。</p>
+      <img src={sokatsuPoster} alt="" />
     </div>
   );
 };
