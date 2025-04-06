@@ -1,4 +1,65 @@
 @use "../styles/variables";
+
 body {
   background-color: variables.$posterBrown;
+}
+
+.image_container {
+  position: relative;
+  width: 100%;
+
+  .poster_main {
+    width: 100%;
+    opacity: 0.4;
+  }
+
+  .prev_button,
+  .next_button,
+  .stop_button {
+    position: absolute;
+    top: 84%;
+    width: 13%;
+  }
+
+  .prev_button {
+    left: 18%;
+  }
+
+  .next_button {
+    right: 16%;
+  }
+
+  .stop_button {
+    left: 44%;
+    top: 83%; // 位置をずらしたい場合は調整
+  }
+  .shuffle,
+  .repeat {
+    position: absolute;
+    top: 91%;
+    width: 8%;
+  }
+  .shuffle {
+    left: 10%;
+  }
+  .repeat {
+    top: 92%;
+    left: 83%;
+  }
+  // ビューポートの高さが800px以上の場合
+  @media (min-height: 700px) {
+    .prev_button,
+    .next_button,
+    .stop_button {
+      top: 98%; // 例として少し下に配置
+    }
+
+    .stop_button {
+      top: 97%; // stop_buttonだけ別に調整も可能
+    }
+    .shuffle,
+    .repeat {
+      top: 110%;
+    }
+  }
 }
