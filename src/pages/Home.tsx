@@ -10,12 +10,22 @@ import { useState } from "react";
 import { Gallery } from "../components/Gallery/Gallery";
 export const Home = () => {
   const [clickCnt, setClickCnt] = useState<number>(0);
+  const [isLocked, setIsLocked] = useState(false);
+  const lockButton = (): void => {
+    setIsLocked(true);
+    setTimeout(() => {
+      setIsLocked(false);
+    }, 500);
+  };
   const prevButtonHandle = (): void => {
-    if (clickCnt <= 0) return;
+    if (clickCnt <= 0 || isLocked) return;
     setClickCnt(clickCnt - 1);
+    lockButton();
   };
   const nextButtonHandle = (): void => {
+    if (isLocked) return;
     setClickCnt(clickCnt + 1);
+    lockButton();
   };
   return (
     <>
