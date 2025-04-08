@@ -13,7 +13,11 @@ export const Gallery = (props: GalleryProps) => {
     contextSafe(() => {
       if (props.x < 0) console.error("Galleryのxは0以上で指定してください");
       setViewNum(props.x % props.imgs.length); //余りを使って、番号を循環する
-      gsap.to(container.current, { rotation: "+=360" });
+      gsap.from(container.current, {
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out",
+      }); //アニメーション
     }),
     [props.x]
   );

@@ -15,7 +15,7 @@ export const Home = () => {
     setIsLocked(true);
     setTimeout(() => {
       setIsLocked(false);
-    }, 500);
+    }, 2000);
   };
   const prevButtonHandle = (): void => {
     if (clickCnt <= 0 || isLocked) return;
