@@ -66,6 +66,12 @@ body {
     top: 92%;
     left: 83%;
   }
+  .next_button_animation {
+    position: absolute;
+    top: 84%;
+    width: 13%;
+    right: 16%;
+  }
   // ビューポートの高さが800px以上の場合
   @media (min-height: 700px) {
     .prev_button,
