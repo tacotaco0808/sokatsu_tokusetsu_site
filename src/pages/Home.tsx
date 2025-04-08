@@ -43,7 +43,6 @@ export const Home = () => {
         </div>
         <div className={styles.poster_bg}></div>
       </div>
-      <p>{clickCnt}</p>
     </>
   );
 };
