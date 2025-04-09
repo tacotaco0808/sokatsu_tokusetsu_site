@@ -85,6 +85,32 @@ export const Home = () => {
         </div>
         <div className={styles.poster_bg}></div>
       </div>
+      <section className={styles.sokatsu_overview}>
+        <h1>Overview</h1>
+        <div>
+          <h3>Activities</h3>
+          <p>
+            イラスト、写真、CG、模型、 <br />
+            ゲーム、アニメ、写真、音楽、デザイン
+          </p>
+        </div>
+        <div>
+          <h3>Schedule</h3>
+          <p>水曜日 18:00~20:00</p>
+          <p>金曜日 18:00~20:00</p>
+        </div>
+        <div>
+          <h3>Location</h3>
+          <p>70号館 7074号室</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Gmail: nu.sousaku.e@gmail.com</p>
+          <a href="https://x.com/nu_sousaku_e">
+            <p>Twitter: @nu_sousaku_e</p>
+          </a>
+        </div>
+      </section>
     </>
   );
 };
