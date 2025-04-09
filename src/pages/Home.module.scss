@@ -24,7 +24,6 @@ body {
     z-index: -1; // 背景画像を背面に配置
   }
   .poster_wrapper {
-    opacity: 0.8; // 透過度を設定
     position: relative;
     width: 100%;
     aspect-ratio: 100/148;
@@ -72,20 +71,27 @@ body {
     width: 13%;
     right: 16%;
   }
-  // ビューポートの高さが800px以上の場合
-  @media (min-height: 700px) {
-    .prev_button,
-    .next_button,
-    .stop_button {
-      top: 98%; // 例として少し下に配置
-    }
-
-    .stop_button {
-      top: 97%; // stop_buttonだけ別に調整も可能
-    }
-    .shuffle,
-    .repeat {
-      top: 110%;
-    }
-  }
 }
+//   // ビューポートの高さが800px以上の場合
+//   @media (min-height: 700px) {
+//     .prev_button,
+//     .next_button,
+//     .stop_button {
+//       top: 98%; // 例として少し下に配置
+//     }
+
+//     .stop_button {
+//       top: 97%; // stop_buttonだけ別に調整も可能
+//     }
+//     .shuffle,
+//     .repeat {
+//       top: 110%;
+//     }
+//     .next_button_animation {
+//       position: absolute;
+//       top: 98%;
+//       width: 13%;
+//       right: 16%;
+//     }
+//   }
+// }
