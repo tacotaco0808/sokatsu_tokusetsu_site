@@ -5,11 +5,14 @@ import stopButton from "../assets/button/stop.png";
 import shuffleButton from "../assets/button/shuffle.png";
 import repeatButton from "../assets/button/repeat.png";
 import styles from "./Home.module.scss";
-
+import design_category from "../assets/poster_design/category.png";
+import design_code from "../assets/poster_design/design_code.png";
+import design_number from "../assets/poster_design/number.png";
 import { useEffect, useRef, useState } from "react";
 import { Gallery } from "../components/Gallery/Gallery";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+
 export const Home = () => {
   const [clickCnt, setClickCnt] = useState<number>(0);
   const [isLocked, setIsLocked] = useState(false);
@@ -56,8 +59,17 @@ export const Home = () => {
     <>
       <div className={styles.image_container}>
         <div className={styles.poster_wrapper}>
-          <img className={styles.poster_main} src={sokatsuPoster} alt="" />
+          <div>
+            <img className={styles.poster_main} src={sokatsuPoster} alt="" />
+            <img className={styles.design_code} src={design_code} alt="" />
+            <img className={styles.design_number} src={design_number} alt="" />
+          </div>
 
+          <img
+            className={styles.design_category}
+            src={design_category}
+            alt=""
+          />
           <img
             className={styles.prev_button}
             src={prevButton}
