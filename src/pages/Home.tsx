@@ -98,6 +98,7 @@ export const Home = () => {
         <div className={styles.poster_bg}></div>
       </div>
       <section className={styles.sokatsu_overview}>
+        <hr />
         <h1>Overview</h1>
         <div>
           <h3>Activities</h3>
@@ -121,6 +122,17 @@ export const Home = () => {
           <a href="https://x.com/nu_sousaku_e">
             <p>Twitter: @nu_sousaku_e</p>
           </a>
+        </div>
+        <div>
+          <h3>Comment</h3>
+          <p>みんなでものづくりをしています！</p>
+          <p>
+            書いてあるもの以外の創作も大歓迎です。学年問わず気軽に見学しにきてね。
+          </p>
+          <p>イラストを描く人が多いです。</p>
+        </div>
+        <div className={styles.designed_by}>
+          <p>Designed by taco</p>
         </div>
       </section>
     </>

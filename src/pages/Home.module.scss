@@ -95,14 +95,38 @@ body {
   }
 }
 .sokatsu_overview {
+  color: variables.$posterTextLightBrown;
+  padding: 2rem;
+  a {
+    text-decoration: underline;
+  }
+  hr {
+    color: variables.$posterLightBrown;
+    border-width: 2px;
+    border-style: dashed;
+  }
   h1 {
-    margin: 0 auto;
+    color: variables.$posterBlue;
+    margin: 1rem auto;
   }
-  h3 {
-    font-size: 23px;
+  div {
+    margin-top: 1rem;
+
+    h3 {
+      color: variables.$posterBlue;
+      font-size: 23px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
-  p {
-    font-size: 18px;
+  .designed_by {
+    margin-top: 2rem;
+    p {
+      text-align: right;
+      margin: 0;
+      font-size: 14px;
+    }
   }
 }
 //   // ビューポートの高さが800px以上の場合
