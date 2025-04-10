@@ -37,6 +37,7 @@ export const Home = () => {
   const nextButtonAnimation = useRef<HTMLImageElement>(null);
   const { contextSafe } = useGSAP({ scope: nextButtonAnimation }); // GSAPのコンテキストを取得
   const animationRef = useRef<gsap.core.Tween | null>(null);
+  const logosRef = useRef<HTMLDivElement>(null); // コンテナの参照
   useEffect(
     contextSafe(() => {
       const tmpAnim = gsap.to(nextButtonAnimation.current, {
@@ -46,9 +47,15 @@ export const Home = () => {
         repeat: -1,
       });
       animationRef.current = tmpAnim;
+      gsap.from(logosRef.current, {
+        opacity: 0, // 初期状態で透明
+        duration: 5, // アニメーションの時間
+        ease: "power3.in",
+      });
     }),
     []
   );
+
   const pauseNextAnimation = contextSafe(() => {
     if (animationRef.current) {
       animationRef.current.restart();
@@ -59,17 +66,17 @@ export const Home = () => {
     <>
       <div className={styles.image_container}>
         <div className={styles.poster_wrapper}>
-          <div>
-            <img className={styles.poster_main} src={sokatsuPoster} alt="" />
+          <img className={styles.poster_main} src={sokatsuPoster} alt="" />
+          <div ref={logosRef}>
             <img className={styles.design_code} src={design_code} alt="" />
             <img className={styles.design_number} src={design_number} alt="" />
+            <img
+              className={styles.design_category}
+              src={design_category}
+              alt=""
+            />
           </div>
 
-          <img
-            className={styles.design_category}
-            src={design_category}
-            alt=""
-          />
           <img
             className={styles.prev_button}
             src={prevButton}
